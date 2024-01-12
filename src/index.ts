@@ -1,9 +1,14 @@
 import fastify from "fastify";
+import cors from "@fastify/cors";
 
 import { sendPushNotificatioSchema } from "./schemas";
 import { sendPushNotification } from "./services";
 
 const server = fastify();
+server.register(cors, {
+  origin: "*",
+  methods: ["POST"],
+});
 
 server.get("/", () => {
   return "WELCOME TO THE JUNGLE!";
