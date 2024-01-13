@@ -11,5 +11,14 @@
       "src": "(.*)",
       "dest": "src/index.ts"
     }
+  ],
+  "headers": [
+    {
+      "src": "src/index.ts",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "POST" }
+      ]
+    }
   ]
 }
