@@ -9,16 +9,11 @@
   "routes": [
     {
       "src": "(.*)",
-      "dest": "src/index.ts"
-    }
-  ],
-  "headers": [
-    {
-      "source": "src/index.ts",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "POST" }
-      ]
+      "dest": "src/index.ts",
+      "methods": ["POST"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
     }
   ]
 }
